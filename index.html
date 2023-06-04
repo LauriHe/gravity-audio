@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/f30e376f7f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+    <title>Gravity audio</title>
+  </head>
+  <body>
+    <div id="centerDot"></div>
+    <canvas id="paper"></canvas>
+    <div id="mask"></div>
+    <div id="buttonsHover"></div>
+    <div id="buttonsAndSettings">
+      <div id="buttonsContainer">
+        <button id="startButton">
+          <p>START</p>
+          <i id="play" class="fa-solid fa-play"></i>
+          <i id="pause" class="fa-solid fa-pause"></i>
+        </button>
+        <button id="restartButton">
+          <i id="restartIcon" class="fa-solid fa-arrow-rotate-left"></i>
+        </button>
+        <button id="settingsButton">
+          <i id="settingsIcon" class="fa-solid fa-gear"></i>
+        </button>
+      </div>
+      <div id="settings">
+        <div id="dotsDiv">
+          <p>Dots</p>
+          <input type="range" min="1" max="21" value="14" class="slider" id="dots" />
+          <div class="rangeValue" id="dotsText"></div>
+        </div>
+        <div>
+          <p>Gravity intensity</p>
+          <input type="range" min="1" max="100" value="10" class="slider" id="gravityIntensity" />
+          <div class="rangeValue" id="gravityIntensityText"></div>
+        </div>
+        <div>
+          <p>Gravity difference</p>
+          <input type="range" min="0" max="10" value="0.5" class="slider" id="gravityDifference" step="0.5" />
+          <div class="rangeValue" id="gravityDifferenceText"></div>
+        </div>
+        <div id="dropDiv">
+          <p>Drop height</p>
+          <input type="range" min="5" max="30" value="30" class="slider" id="DropHeight" />
+          <div class="rangeValue" id="dropHeightText"></div>
+        </div>
+        <div>
+          <p>Show lines</p>
+          <div class="radio">
+            <input type="radio" id="no" name="showLines" value="no" />
+            <label for="no">No</label>
+            <input type="radio" id="yes" name="showLines" value="yes" />
+            <label for="yes">Yes</label>
+          </div>
+        </div>
+        <div>
+          <p>Line length</p>
+          <input type="range" min="1" max="20" value="5" class="slider" id="lineLength" />
+          <div class="rangeValue" id="lineLengthText"></div>
+        </div>
+        <div>
+          <p>Dot color</p>
+          <div class="radio">
+            <input type="radio" id="dotIndex" name="dotColor" value="index" />
+            <label for="dotIndex">Index</label>
+            <input type="radio" id="dotspeed" name="dotColor" value="speed" />
+            <label for="dotspeed">Speed</label>
+            <input type="radio" id="dotheight" name="dotColor" value="height" />
+            <label for="dotheight">Height</label>
+          </div>
+        </div>
+        <div>
+          <p>Line color</p>
+          <div class="radio">
+            <input type="radio" id="lineIndex" name="lineColor" value="index" />
+            <label for="lineIndex">Index</label>
+            <input type="radio" id="linespeed" name="lineColor" value="speed" />
+            <label for="linespeed">Speed</label>
+            <input type="radio" id="lineheight" name="lineColor" value="height" />
+            <label for="lineheight">Height</label>
+          </div>
+        </div>
+        <div>
+          <p>Hue range</p>
+          <input type="range" min="1" max="360" value="360" class="slider" id="hueRange" />
+          <div class="rangeValue" id="hueRangeText"></div>
+        </div>
+        <div>
+          <p>Hue offset</p>
+          <input type="range" min="0" max="360" value="0" class="slider" id="hueOffset" />
+          <div class="rangeValue" id="hueOffsetText"></div>
+        </div>
+        <div>
+          <p>Refresh rate</p>
+          <input type="range" min="1" max="165" value="165" class="slider" id="refreshRate" />
+          <div class="rangeValue" id="refreshRateText"></div>
+        </div>
+      </div>
+      <div id="hoverBar"></div>
+    </div>
+  </body>
+</html>
