@@ -334,6 +334,7 @@ const toggleAnimation = () => {
     updateInterval = setInterval(() => {
       updatePosition();
     }, refreshRate);
+    mask.style.display = 'none';
 
     // if it's the first time the animation is starting
     if (!started) {
@@ -353,8 +354,8 @@ const toggleAnimation = () => {
 };
 
 // set the refresh rate of the animation
-const setRefreshRate = (rateInfps) => {
-  const rateInMs = 1000 / rateInfps;
+const setRefreshRate = (rateInFps) => {
+  const rateInMs = 1000 / rateInFps;
   refreshRate = rateInMs;
 
   // if the animation is running, restart it with the new refresh rate
